@@ -23,16 +23,5 @@
       "src": "/(.*)", 
       "dest": "/frontend/$1"
     }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "index, follow"
-        }
-      ]
-    }
   ]
 } 
