@@ -1,6 +1,9 @@
 {
   "version": 2,
   "public": true,
+  "github": {
+    "silent": true
+  },
   "builds": [
     { 
       "src": "frontend/package.json", 
@@ -19,6 +22,17 @@
     { 
       "src": "/(.*)", 
       "dest": "/frontend/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
     }
   ]
 } 
