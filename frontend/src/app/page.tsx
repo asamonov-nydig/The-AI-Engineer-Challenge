@@ -35,7 +35,7 @@ export default function Home() {
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [streamingContent, setStreamingContent] = useState('')
-  const [backendUrl, setBackendUrl] = useState('http://localhost:8000')
+  const [backendUrl, setBackendUrl] = useState(typeof window !== 'undefined' ? window.location.origin : 'http://localhost:8000')
 
   // Check backend health on component mount
   useEffect(() => {
