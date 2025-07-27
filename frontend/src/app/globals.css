@@ -3,12 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
   html {
     font-family: 'Inter', system-ui, sans-serif;
+    height: 100%;
   }
   
   body {
     @apply bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen;
+    margin: 0;
+    padding: 0;
+    height: 100%;
   }
 }
 
